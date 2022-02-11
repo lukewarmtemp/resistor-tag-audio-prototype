@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1
 
                     try
                     {
-                        string path = "C:\\Users\\GEOG-student\\OneDrive - University of Toronto\\Documents\\100. Luke\\100. School\\130. University of Toronto\\2020-2021\\Courses\\Semester02\\Test.txt";
+                        string path = "** include the file path to a txt file called Test.txt **";
                         if (File.ReadAllLines(path).Contains(confirmResult.ToString()))
                         {
                             Console.WriteLine("already in");
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1
             sourceStream.DeviceNumber = deviceNumber;
             sourceStream.WaveFormat = new NAudio.Wave.WaveFormat(44100, NAudio.Wave.WaveIn.GetCapabilities(deviceNumber).Channels);
 
-            string part = "C:\\Users\\GEOG-student\\OneDrive - University of Toronto\\Documents\\100. Luke\\100. School\\130. University of Toronto\\2020-2021\\Courses\\Semester02\\";
+            string part = "** Include path of where you want to have the stored audio files **";
             sourceStream.DataAvailable += new EventHandler<NAudio.Wave.WaveInEventArgs>(sourceStream_DataAvailable);
             waveWriter = new NAudio.Wave.WaveFileWriter(part + name + ".wav", sourceStream.WaveFormat);
 
@@ -180,8 +180,7 @@ namespace WindowsFormsApplication1
             sourceStream.WaveFormat = new NAudio.Wave.WaveFormat(44100, NAudio.Wave.WaveIn.GetCapabilities(deviceNumber).Channels);
 
             sourceStream.DataAvailable += new EventHandler<NAudio.Wave.WaveInEventArgs>(sourceStream_DataAvailable);
-            string part = "C:\\Users\\GEOG-student\\OneDrive - University of Toronto\\Documents\\100. Luke\\100. School\\130. University of Toronto\\2020-2021\\Courses\\Semester02\\";
-            waveWriter = new NAudio.Wave.WaveFileWriter("C:\\Users\\GEOG-student\\OneDrive - University of Toronto\\Documents\\100. Luke\\100. School\\130. University of Toronto\\2020-2021\\Courses\\Semester02\\hello2.wav", sourceStream.WaveFormat);
+            string part = "** Include Path of where you want to store the recorded audio file **";
 
             sourceStream.StartRecording();
         }
@@ -215,7 +214,7 @@ namespace WindowsFormsApplication1
 
                     try
                     {
-                        string path = "C:\\Users\\GEOG-student\\OneDrive - University of Toronto\\Documents\\100. Luke\\100. School\\130. University of Toronto\\2020-2021\\Courses\\Semester02\\Test.txt";
+                        string path = "** include the file path to a txt file called Test.txt **";
                         if (File.ReadAllLines(path).Contains(confirmResult.ToString()))
                         {
                             Console.WriteLine("already in");
@@ -254,7 +253,7 @@ namespace WindowsFormsApplication1
             }
             else if (count >= 5)
             {
-                string path = "C:\\Users\\GEOG-student\\OneDrive - University of Toronto\\Documents\\100. Luke\\100. School\\130. University of Toronto\\2020-2021\\Courses\\Semester02\\Test.txt";
+                string path = "** include the file path to a txt file called Test.txt **";
                 count = 0;
                 stopRecording();
                 Console.WriteLine("Recording End");
@@ -303,7 +302,7 @@ namespace WindowsFormsApplication1
         {
             if (first3 == false)
             {
-                simpleSound2 = new SoundPlayer("C:\\Users\\GEOG-student\\OneDrive - University of Toronto\\Documents\\100. Luke\\100. School\\130. University of Toronto\\2020-2021\\Courses\\Semester02\\" + confirmResult.ToString() + ".wav");
+                simpleSound2 = new SoundPlayer("** include the file path to where you want to record files **" + confirmResult.ToString() + ".wav");
                 simpleSound2.Play();
                 first3 = true;
             }
